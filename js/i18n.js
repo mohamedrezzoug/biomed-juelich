@@ -1,0 +1,72 @@
+/* Textes de l'interface (DE / FR / EN) + helper L() pour le contenu */
+window.L = function (de, fr, en) { return { de: de, fr: fr, en: en }; };
+window.MODULES = [];
+
+window.UI = {
+  de: {
+    title: 'Studienbegleiter Biomedizintechnik',
+    sub: '1. Studienjahr · Jülich',
+    hello: 'Hallo', namePrompt: 'Wie heißt du?', nameSave: 'Speichern',
+    search: 'Modul suchen …', modules: 'Module', chapters: 'Kapitel',
+    course: 'Kurs', quiz: 'Quiz', cards: 'Karteikarten', notes: 'Notizen',
+    markRead: 'Als gelesen markieren', read: 'Gelesen ✓', unread: 'Gelesen-Markierung entfernen',
+    startAll: 'Alle Fragen des Moduls', next: 'Weiter', finish: 'Ergebnis anzeigen',
+    score: 'Ergebnis', best: 'Beste', retry: 'Nochmal', back: 'Zurück', toQuizList: 'Zur Auswahl',
+    correct: 'Richtig!', wrong: 'Leider falsch.', question: 'Frage',
+    known: 'Gewusst', again: 'Nochmal üben', tapFlip: 'Tippen zum Umdrehen',
+    onlyTodo: 'Nur offene', allCards: 'Alle', noCards: 'Alle Karten gewusst – super! 🎉',
+    cardsKnown: 'gewusst', notesPh: 'Eigene Notizen zu diesem Modul …',
+    settings: 'Einstellungen', language: 'Sprache', theme: 'Darstellung',
+    auto: 'Automatisch', light: 'Hell', dark: 'Dunkel',
+    export: 'Fortschritt exportieren (JSON)', import: 'Fortschritt importieren',
+    importOk: 'Import erfolgreich.', importErr: 'Datei ungültig.',
+    resetAll: 'Alles zurücksetzen', resetConfirm: 'Wirklich alles löschen (Fortschritt, Notizen)?',
+    progress: 'Fortschritt', overall: 'Gesamtfortschritt', chaptersRead: 'Kapitel gelesen', quizAvg: 'Quiz-Durchschnitt',
+    note: 'Hinweis: Die Inhalte sind eine Lernhilfe und ersetzen weder Vorlesung noch Modulhandbuch.',
+    credits: 'Code'
+  },
+  fr: {
+    title: 'Compagnon d’études – Ingénierie biomédicale',
+    sub: '1re année · Jülich',
+    hello: 'Bonjour', namePrompt: 'Comment t’appelles-tu ?', nameSave: 'Enregistrer',
+    search: 'Chercher un module …', modules: 'Modules', chapters: 'chapitres',
+    course: 'Cours', quiz: 'Quiz', cards: 'Fiches', notes: 'Notes',
+    markRead: 'Marquer comme lu', read: 'Lu ✓', unread: 'Retirer la marque « lu »',
+    startAll: 'Toutes les questions du module', next: 'Suivant', finish: 'Voir le résultat',
+    score: 'Résultat', best: 'Meilleur', retry: 'Recommencer', back: 'Retour', toQuizList: 'Retour au choix',
+    correct: 'Correct !', wrong: 'Faux, dommage.', question: 'Question',
+    known: 'Je sais', again: 'À revoir', tapFlip: 'Touche pour retourner',
+    onlyTodo: 'À revoir seulement', allCards: 'Toutes', noCards: 'Toutes les fiches sont sues – bravo ! 🎉',
+    cardsKnown: 'sues', notesPh: 'Tes notes personnelles sur ce module …',
+    settings: 'Réglages', language: 'Langue', theme: 'Affichage',
+    auto: 'Automatique', light: 'Clair', dark: 'Sombre',
+    export: 'Exporter la progression (JSON)', import: 'Importer la progression',
+    importOk: 'Import réussi.', importErr: 'Fichier invalide.',
+    resetAll: 'Tout réinitialiser', resetConfirm: 'Vraiment tout effacer (progression, notes) ?',
+    progress: 'Progression', overall: 'Progression globale', chaptersRead: 'chapitres lus', quizAvg: 'Moyenne des quiz',
+    note: 'Remarque : ces contenus sont une aide à la révision et ne remplacent ni les cours ni le manuel du module.',
+    credits: 'Code'
+  },
+  en: {
+    title: 'Biomedical Engineering Study Companion',
+    sub: '1st year · Jülich',
+    hello: 'Hello', namePrompt: 'What is your name?', nameSave: 'Save',
+    search: 'Search module …', modules: 'Modules', chapters: 'chapters',
+    course: 'Course', quiz: 'Quiz', cards: 'Flashcards', notes: 'Notes',
+    markRead: 'Mark as read', read: 'Read ✓', unread: 'Remove “read” mark',
+    startAll: 'All questions of the module', next: 'Next', finish: 'Show result',
+    score: 'Result', best: 'Best', retry: 'Try again', back: 'Back', toQuizList: 'Back to selection',
+    correct: 'Correct!', wrong: 'Sorry, wrong.', question: 'Question',
+    known: 'Got it', again: 'Practise again', tapFlip: 'Tap to flip',
+    onlyTodo: 'Open only', allCards: 'All', noCards: 'All cards known – great! 🎉',
+    cardsKnown: 'known', notesPh: 'Your own notes for this module …',
+    settings: 'Settings', language: 'Language', theme: 'Appearance',
+    auto: 'Automatic', light: 'Light', dark: 'Dark',
+    export: 'Export progress (JSON)', import: 'Import progress',
+    importOk: 'Import successful.', importErr: 'Invalid file.',
+    resetAll: 'Reset everything', resetConfirm: 'Really delete everything (progress, notes)?',
+    progress: 'Progress', overall: 'Overall progress', chaptersRead: 'chapters read', quizAvg: 'Quiz average',
+    note: 'Note: this content is a study aid and does not replace lectures or the module handbook.',
+    credits: 'Code'
+  }
+};
